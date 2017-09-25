@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# this script adds 199,207,201,209 keycodes to the force_release
+# file so that Fn+<Left/Right/Up/Down> don't get "stuck" and
+# work as Home/End/PgUp/PgDn
+# tested on Dell Inspiron 11
+# reference: https://bbs.archlinux.org/viewtopic.php?id=164121
+echo 133-139,143,147,369-370,199,207,201,209 > /sys/bus/serio/devices/serio0/force_release
