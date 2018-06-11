@@ -10,7 +10,7 @@ Usage:
 - generate payload (.exe)
 - generate MOF file
 - upload payload executable to c:\Windows\System32 on the target system
-- upload MOF file to c:\Windows\System32\Wbem\mof on the target system
+- upload MOF file to c:\Windows\System32\wbem\MOF on the target system
 """
 
 import sys
