@@ -10,11 +10,11 @@ RUN apt-get -y update && apt-get -y dist-upgrade && apt-get -y autoremove && apt
 RUN apt-get -y install kali-linux-top10 exploitdb man-db dirb nikto wpscan uniscan
 
 # initialize Metasploit databse
-RUN msfdb init
+RUN service postgresql start && msfdb init && service postgresql stop
 
 VOLUME /root /var/lib/postgresql
 # default LPORT for reverse shell
 EXPOSE 4444
 
 WORKDIR /root
-ENTRYPOINT ["/bin/bash"]
+CMD ["/bin/bash"]
