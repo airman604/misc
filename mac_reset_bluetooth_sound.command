@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# needs blueutil, `brew install blueutil` if not present
+
 AIRPODS_ID=14-88-e6-93-14-29
 
 echo -n "Resetting Bluetooth and Core Audio..."
