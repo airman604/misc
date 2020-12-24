@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # do APT update
 RUN apt-get -y update && apt-get -y dist-upgrade && apt-get -y autoremove && apt-get clean
 # install Kali Linux "Top 10" metapackage and a couple "nice to have" tools
-RUN apt-get -y install kali-linux-top10 exploitdb man-db dirb nikto wpscan uniscan
+RUN apt-get -y install kali-tools-top10 exploitdb man-db dirb nikto wpscan uniscan
 
 # initialize Metasploit databse
 RUN service postgresql start && msfdb init && service postgresql stop
