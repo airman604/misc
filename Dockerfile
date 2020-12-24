@@ -1,7 +1,7 @@
 # Kali Linux Top10
 # Docker image with kali-linux-top10 and a handful of other useful tools
 # More info: https://medium.com/@infosec_stuff/kali-linux-in-a-docker-container-5a06311624eb
-FROM kalilinux/kali-linux-docker
+FROM kalilinux/kali-rolling
 
 ENV DEBIAN_FRONTEND noninteractive
 # do APT update
